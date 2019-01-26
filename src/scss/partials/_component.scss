@@ -62,7 +62,6 @@ a:link, a:visited, a:hover, a:active{
         	transition: 0.15s;
           }
         }
-        .nav-item
         .nav-item.active a,
         .nav-item a:hover{
        	background-color: #d03c56;
@@ -70,7 +69,6 @@ a:link, a:visited, a:hover, a:active{
        }
       }
     }
-
 .wrapper{
 	width: 970px;
 	margin: 30px auto 40px;
@@ -96,16 +94,66 @@ a:link, a:visited, a:hover, a:active{
         height: 100%;
       }
       .content{
+				position: relative;
         float: left;
         width: 50%;
         height: 100%;
         padding: 105px 25px 0;
         background-color: #2d3d54;
-
+				line-height: 1.6;
       }
+			.title{
+				margin-bottom: 15px;
+				color: #fff;
+				font-weight: normal;
+				font-size: 2.0rem;
+			}
+			.desc{
+				color: #ddc;
+			}
+			.date{
+				position: absolute;
+				top:60px;
+				left:0;
+				width: 140px;
+				padding: 4px;
+				background-color: #fff;
+				color: #2d3d54;
+				text-align: center;
+				letter-spacing: 1px;
+				font-weight: bold;
+				font-size: 1.1rem;
+				line-height: 1;
+			}
     }
-  }
-}
+		.heading{
+			padding: 10px 12px;
+			background: url("/images/斜線.jpg");
+			letter-spacing: 1px;
+			font-size: 1.6rem;
+		}
+		.scroll-list{
+			max-height: 220px;
+			overflow-y: auto;
+			margin-bottom: 30px;
+			list-style-type: none;
+			.scroll-item{
+				a{
+					display: block;
+					padding: 10px 15px;
+					color: #333;
+					transition: background-color 0.1s;
+					}
+					:nth-of-type(even) a{
+						background: url("/images/斜線.jpg");
+					}
+					a:hover{
+						background-color: #fafaf8;
+					}
+				}
+			}
+	  }
+	}
 .sidemenu{
 	float: right;
 	width:275px;
