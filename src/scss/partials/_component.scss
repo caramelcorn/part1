@@ -72,6 +72,12 @@ a:link, a:visited, a:hover, a:active{
 .wrapper{
 	width: 970px;
 	margin: 30px auto 40px;
+	.heading{
+		padding: 10px 12px;
+		background: url("/images/shasen.jpg");
+		letter-spacing: 1px;
+		font-size: 1.6rem;
+	}
   .main{
   	display: block;
   	float: left;
@@ -126,37 +132,184 @@ a:link, a:visited, a:hover, a:active{
 				line-height: 1;
 			}
     }
-		.heading{
-			padding: 10px 12px;
-			background: url("/images/斜線.jpg");
-			letter-spacing: 1px;
-			font-size: 1.6rem;
-		}
 		.scroll-list{
 			max-height: 220px;
 			overflow-y: auto;
 			margin-bottom: 30px;
 			list-style-type: none;
+			// :nth-of-type(even) a{
+			// 	background: url("/images/shasen.jpg");
+			// }
 			.scroll-item{
 				a{
+					.date{
+						display: inline-block;
+						width: 19%;
+						letter-spacing: 1px;
+						font-weight: bold;
+						font-size: 1.0rem;
+					}
+					.category{
+						display: inline-block;
+						width: 8%;
+						border-radius: 5px;
+						background-color: #d03456;
+						color: #fff;
+						text-align: center;
+						letter-spacing: 1px;
+						font-size: 1.0rem;
+						line-height: 16px
+					}
+					.category.news{
+						background-color: #2c3c53;
+					}
+					.title{
+						display: inline-block;
+						width: 73%;
+						padding-left: 15px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						font-size: 1.2rem;
+					}
 					display: block;
 					padding: 10px 15px;
 					color: #333;
+					font-size: 0;
 					transition: background-color 0.1s;
 					}
-					:nth-of-type(even) a{
-						background: url("/images/斜線.jpg");
-					}
+
 					a:hover{
 						background-color: #fafaf8;
 					}
 				}
+			}
+			.airticle-box{
+				position: relative;
+				display: block;
+				width: 315px;
+				height: 360px;
+				margin-bottom: 30px;
+				padding: 210px 15px 0;
+				box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+		    transition: opacity 0.15s;
+				.title{
+					margin-top: 30px;
+					color: #555;
+					font-size: 1.4rem;
+					line-height: 1.6;
+				}
+				.desc{
+					margin-top: 5px;
+					color: #333;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				.date{
+					position: absolute;
+					right: 0;
+					bottom: 15px;
+					width: 160px;
+					padding: 4px;
+					background-color: #b5d264;
+					color: #2d3d54;
+					text-align: center;
+					letter-spacing: 1px;
+					font-weight: bold;
+					font-size: 1.1rem;
+				}
+				.image{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width:100%;
+				}
+			}
+				.airticle-box:nth-of-type(odd){
+					float: left;
+				}
+				.airticle-box:nth-of-type(even){
+					float: right;
 			}
 	  }
 	}
 .sidemenu{
 	float: right;
 	width:275px;
+	.ranking{
+		margin-bottom: 30px;
+		list-style-type: none;
+		counter-reset: ranking;
+		.ranking-item{
+			margin-top: 15px;
+			a{
+				display: block;
+				font-size: 0;
+				transition: opacity 0.15s;
+				:hover{
+					opacity: 0.8s;
+				}
+				.image{
+					width: 55px;
+					height: 55px;
+				}
+				.text{
+					display: inline-block;
+					width: 182px;
+					color: #000;
+					vertical-align: top;
+					line-height: 1.5;
+				}
+				.order{
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					margin: 0 10px;
+					border: 1px solid #ccc;
+					color: #aaa;
+					vertical-align:20px;
+					text-align: center;
+					font-weight: bold;
+					line-height: 16px;
+					-webkit-transform: rotate(45deg);
+    			-ms-transform: rotate(45deg);
+    			transform: rotate(45deg);
+					::before{
+					   	content: counter(ranking);
+					    counter-increment: ranking;
+							display: inline-block;
+					    font-size: 1.0rem;
+					    -webkit-transform: rotate(-45deg);
+					    -ms-transform: rotate(-45deg);
+					    transform: rotate(-45deg);
+					}
+				}
+				:nth-of-type(1).ordeer
+				:nth-of-type(2).ordeer
+				:nth-of-type(3).ordeer{
+					border: none;
+					color: #fff;
+					font-weight: normal;
+					line-height: 18px;
+				}
+				:nth-of-type(1).ordeer{
+					background-color: #dab413;
+				}
+				:nth-of-type(2).ordeer{
+					background-color: #6e7b84;
+
+				}
+				:nth-of-type(3).ordeer{
+					background-color: #a0541a;
+				}
+
+
+
+
+			}
+		}
+	}
 }
 .footer{
 	width: 100%;
